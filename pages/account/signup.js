@@ -1,8 +1,12 @@
 import Link from 'next/link';
-
-export function Signup(){
+import Head from 'next/head'
+import Image from 'next/image'
+export default function Signup(){
     return(
        <div>
+         <Head>
+                <title>Skytrack-Signup</title>
+            </Head>
          <div class="vh-100">
         <div class="row">
             <div class="col-md-4 bg-white">
@@ -11,12 +15,12 @@ export function Signup(){
                     <div class="form-container flex flex-column">
                         <p class="sub-hed text-center">SignUp</p>
                         <div class="login-with flex flex-row space-between width-100">
-                            <div class="social1 flex flex-row items-center justify-center">
-                                <img src="assets/icons/google-icon.png" alt=""/>
+                        <div class="social1 flex flex-row items-center justify-center">
+                                <Image src="/assets/icons/google-icon.png" width={20} height={20}/>
                                 <p>Google</p>
                             </div>
                             <div class="social1 flex flex-row items-center justify-center">
-                                <img src="assets/icons/facebook-icon.png" alt=""/>
+                                <Image src="/assets/icons/facebook-icon.png" width={20} height={20}/>
                                 <p>FaceBook</p>
                             </div>
                         </div>
@@ -32,7 +36,7 @@ export function Signup(){
                             <input type="text" name="password" id="myInput2" placeholder="Enter Your Password"/>
                            <div class="absolute show-icon-box">
                                 <div onclick="myPassword(2)" id="closeEye2"><i class="fa fa-eye-slash"></i></div>              
-                                <div onclick="myPassword(2)" id="openEye2" style="display: none;"><i class="fa fa-eye"></i></div>
+                                {/* <div onclick="myPassword(2)" id="openEye2" style="display: none;"><i class="fa fa-eye"></i></div> */}
                                 
                            </div>
                        </div>
@@ -44,14 +48,14 @@ export function Signup(){
                             </div>
                             
                        </div>
-                       <a href="confirm.html"><button>Create Account</button></a>
-                       <span class="new text-center">Already have an account?  <Link href="/login">Login</Link> </span>
+                       <Link href="/account/confirm-account"><button>Create Account</button></Link>
+                       <span class="new text-center">Already have an account?  <Link href="/account/login">Login</Link> </span>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 bg-grey">
                 <div class="right-img flex items-center justify-center width-100">
-                    <img src="assets/images/signup-vector.png" alt="" width="450px"/>
+                <Image  src='/assets/images/signup-vector.png' width={450} height={400}/>
                 </div>
             </div>
     

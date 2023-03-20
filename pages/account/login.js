@@ -7,7 +7,7 @@ export default function Login(){
         
         <div>
             <Head>
-                <title>Login</title>
+                <title>SkyTrack-Login</title>
             </Head>
             
             <div class="vh-100">
@@ -46,17 +46,20 @@ export default function Login(){
                                  
                             </div>
                             <div>
-                                <a class="reset" href="recover.html">Reset Password?</a>
+                            <Link class="reset" href="/account/recover">Reset Password?</Link> 
+
                             </div>
                        </div>
                        <button>Login</button>
-                       <span class="new text-center">Don't have account yet? <Link href="/signup">New Account</Link> </span>
+                       <span class="new text-center">Don't have account yet? 
+                        <Link href="/account/signup">New Account</Link> 
+                       </span>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 bg-grey">
                 <div class="right-img flex items-center justify-center width-100">
-                    <Image class="d-none" src='/assets/images/login-vector.png' width={450} height={450}/>
+                    <Image  src='/assets/images/login-vector.png' width={450} height={450}/>
                 </div>
             </div>
     
